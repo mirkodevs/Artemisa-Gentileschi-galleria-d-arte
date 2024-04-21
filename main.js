@@ -1,5 +1,5 @@
 import { creaDipinti } from "./js/dipinti.js";
-import * as THREE from "./node_modules/three";
+import * as THREE from "three";
 import { PointerLockControls } from "three-stdlib";
 import { displayPaintingInfo, hidePaintingInfo } from "./js/infoDipinti.js";
 import { addObjectsToScene } from "./js/aggiungiOggettiAllaScena.js";

@@ -120,7 +120,7 @@ function checkCollision() {
   return false;
 }
 //Create the ceiling
-const ceilingTexture = textureLoader.load("../img/texture/ceiling.jpg")
+const ceilingTexture = textureLoader.load("./public/img/texture/ceiling.jpg")
 const ceilingGeo = new THREE.PlaneGeometry(50, 50);
 const ceilingMaterial = new THREE.MeshBasicMaterial({
   map:ceilingTexture,

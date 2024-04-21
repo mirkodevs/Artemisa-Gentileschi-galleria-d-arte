@@ -1,8 +1,8 @@
-import { creaDipinti } from "./dipinti.js";
-import * as THREE from "./three.js";
-import { PointerLockControls } from "three/examples/jsm/Addons.js";
-import { displayPaintingInfo, hidePaintingInfo } from "./infoDipinti.js";
-import { addObjectsToScene } from "./aggiungiOggettiAllaScena.js";
+import { creaDipinti } from "./js/dipinti.js";
+import * as THREE from "./js/three.js";
+import { PointerLockControls } from "./node_modules/three-stdlib";
+import { displayPaintingInfo, hidePaintingInfo } from "./js/infoDipinti.js";
+import { addObjectsToScene } from "./js/aggiungiOggettiAllaScena.js";
 const scene = new THREE.Scene();
 //Camera
 const camera = new THREE.PerspectiveCamera(

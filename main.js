@@ -1,5 +1,5 @@
 import { creaDipinti } from "./js/dipinti.js";
-import * as THREE from "./js/three.js";
+import * as THREE from "./node_modules/three"
 import { PointerLockControls } from "./node_modules/three-stdlib";
 import { displayPaintingInfo, hidePaintingInfo } from "./js/infoDipinti.js";
 import { addObjectsToScene } from "./js/aggiungiOggettiAllaScena.js";
@@ -64,6 +64,7 @@ const wallTexture = textureLoader.load("img/texture/wall.jpg");
 //Front Wall
 const frontWallGeometry = new THREE.BoxGeometry(50, 20, 0.001);
 const frontWallMaterial = new THREE.MeshBasicMaterial({
+  color: 0xadadae,
   map: wallTexture,
 });
 const frontWall = new THREE.Mesh(frontWallGeometry, frontWallMaterial);
@@ -72,6 +73,7 @@ frontWall.position.z = -25;
 //left wall
 const leftWallGeometry = new THREE.BoxGeometry(50, 20, 0.001);
 const leftWallMaterial = new THREE.MeshBasicMaterial({
+  color: 0xadadae,
   map: wallTexture,
 });
 const leftWall = new THREE.Mesh(leftWallGeometry, leftWallMaterial);
@@ -80,6 +82,7 @@ leftWall.position.x = -25;
 //muro di destra
 const rigthWallGeo = new THREE.BoxGeometry(50, 20, 0.001);
 const rightWallMaterial = new THREE.MeshBasicMaterial({
+  color: 0xadadae,
   map: wallTexture,
 });
 
@@ -90,6 +93,7 @@ rightWall.position.x = 25;
 const backWall = new THREE.Mesh(
   new THREE.BoxGeometry(50, 20, 0.001),
   new THREE.MeshBasicMaterial({
+    color: 0xadadae,
     map: wallTexture,
   })
 );
@@ -120,30 +124,15 @@ function checkCollision() {
   return false;
 }
 //Create the ceiling
-const ceilingTexture = textureLoader.load("img/texture/ceiling.jpg")
+const ceilingTexture = textureLoader.load("img/texture/ceiling.jpg");
 const ceilingGeo = new THREE.PlaneGeometry(50, 50);
 const ceilingMaterial = new THREE.MeshBasicMaterial({
-  map:ceilingTexture,
+  map: ceilingTexture,
 });
 const ceiling = new THREE.Mesh(ceilingGeo, ceilingMaterial);
 ceiling.rotation.x = Math.PI / 2;
 ceiling.position.y = 10;
 scene.add(ceiling);
-
-function creaDipinto(imageURL, width, height, position) {
-  const textureDipinto = new THREE.TextureLoader().load(imageURL);
-  const geometriaDipinto = new THREE.PlaneGeometry(width, height);
-  const materialeDipinto = new THREE.MeshBasicMaterial({
-    map: textureDipinto,
-  });
-
-  const dipinto = new THREE.Mesh(geometriaDipinto, materialeDipinto);
-  dipinto.position.set(position.x, position.y, position.z);
-
-  scene.add(dipinto);
-  return dipinto;
-}
-
 
 //Controls
 const comandi = new PointerLockControls(camera, document.body);
@@ -180,6 +169,9 @@ const keyPressed = {
 document.addEventListener(
   "keydown",
   (event) => {
+    if (event.keyCode === 13) {
+    cominiciaEsperienza()
+    }
     if (event.key in keyPressed) {
       keyPressed[event.key] = true;
     }
@@ -245,7 +237,8 @@ function render() {
   } else {
     hidePaintingInfo();
   }
-
+  renderer.gammaOutput = true;
+  renderer.gammaFactor = 2.2;
   renderer.render(scene, camera); //renders the scene
   requestAnimationFrame(render);
 }

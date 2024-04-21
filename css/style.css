@@ -51,7 +51,7 @@ canvas {
 }
 h1,
 #content div,
-button {
+button,a {
   background-color: #af8260cc;
   text-align: center;
   border-radius: 12px;
@@ -66,7 +66,7 @@ button {
   }
 }
 
-#content > button {
+#content > button,#content a {
   margin: 10px auto;
   margin-top: 30px;
   margin-bottom: 0;
@@ -78,7 +78,7 @@ button {
 #content button {
   user-select: none;
 }
-#content button:hover {
+#content button:hovern,#content a:hover {
   transition: all 0.5s ease;
   background-color: #af8260;
   transform: scale(1.1);
@@ -134,4 +134,23 @@ button {
     margin-top: 40px;
     opacity: 0;
   }
+}
+@media screen and (max-width:500px) {
+  
+  #content {
+    z-index: 1;
+    padding: 10px;
+    display: grid;
+  }
+
+}
+#info-content{
+
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: #af8260;
+  color: #f6f5f2;
+padding: 12px;
+border-radius: 12px;
 }

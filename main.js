@@ -1,5 +1,5 @@
 import { creaDipinti } from "./js/dipinti.js";
-import * as THREE from "./node_modules/three"
+import * as THREE from "./node_modules/three";
 import { PointerLockControls } from "three-stdlib";
 import { displayPaintingInfo, hidePaintingInfo } from "./js/infoDipinti.js";
 import { addObjectsToScene } from "./js/aggiungiOggettiAllaScena.js";
@@ -13,7 +13,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 scene.add(camera);
-camera.position.set(0,2,15)
+camera.position.set(0, 2, 15);
 //Renderer
 const renderer = new THREE.WebGLRenderer({
   antialias: false,
@@ -171,7 +171,7 @@ document.addEventListener(
   "keydown",
   (event) => {
     if (event.keyCode === 13) {
-    cominiciaEsperienza()
+      cominiciaEsperienza();
     }
     if (event.key in keyPressed) {
       keyPressed[event.key] = true;
@@ -216,7 +216,7 @@ function aggiornaMovimento(delta) {
     camera.position.copy(previousPosition);
   }
 }
-scene.add(comandi.getObject())
+scene.add(comandi.getObject());
 let paintings = creaDipinti(scene, textureLoader);
 addObjectsToScene(scene, paintings);
 //rendering
@@ -245,16 +245,3 @@ function render() {
   requestAnimationFrame(render);
 }
 render();
-
-function suma(){
-const lista = [1,2,3,4,7,66,33,98];
-let suma = 0;
-for(let i = 0;i<lista.length;i++){
-
-if(lista[i] % 2 === 0){
-  suma += lista[i]
-}
-
-}
-
-}

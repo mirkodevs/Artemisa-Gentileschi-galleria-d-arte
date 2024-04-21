@@ -184,7 +184,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `img/dipinti/Esther before Ahasuerus.jpg`,
+    imgSrc: `img/dipinti/Esther_before_Ahasuerus.jpg`,
     width: 9,
     height: 8,
     position: { x: 24.9, y: 3, z: -15 + 10 * 1 },

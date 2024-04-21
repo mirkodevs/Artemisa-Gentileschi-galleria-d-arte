@@ -1,26 +1,27 @@
 import { creaDipinti } from "./js/dipinti.js";
 import * as THREE from "./node_modules/three"
-import { PointerLockControls } from "./node_modules/three-stdlib";
+import { PointerLockControls } from "three-stdlib";
 import { displayPaintingInfo, hidePaintingInfo } from "./js/infoDipinti.js";
 import { addObjectsToScene } from "./js/aggiungiOggettiAllaScena.js";
 const scene = new THREE.Scene();
 //Camera
 const camera = new THREE.PerspectiveCamera(
-  75, //field of view / campo visivo
+  60, //field of view / campo visivo
   window.innerWidth / window.innerHeight, // aspect ratio
-  1, //near
+  0.1, //near
   1000 // far
 );
 
 scene.add(camera);
-camera.position.z = 5; //move the camera back 5 units
-camera.position.y = 3; //move the camera back 5 units
+camera.position.set(0,2,15)
 //Renderer
 const renderer = new THREE.WebGLRenderer({
-  antialias: true,
+  antialias: false,
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0xffffff, 1); // background color
+renderer.shadowMap.enabled = true; // enable shadow mapping
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 document.body.appendChild(renderer.domElement);
 
 //let there be light!
@@ -215,6 +216,7 @@ function aggiornaMovimento(delta) {
     camera.position.copy(previousPosition);
   }
 }
+scene.add(comandi.getObject())
 let paintings = creaDipinti(scene, textureLoader);
 addObjectsToScene(scene, paintings);
 //rendering
@@ -243,3 +245,16 @@ function render() {
   requestAnimationFrame(render);
 }
 render();
+
+function suma(){
+const lista = [1,2,3,4,7,66,33,98];
+let suma = 0;
+for(let i = 0;i<lista.length;i++){
+
+if(lista[i] % 2 === 0){
+  suma += lista[i]
+}
+
+}
+
+}

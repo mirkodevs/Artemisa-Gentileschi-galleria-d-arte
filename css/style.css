@@ -41,7 +41,7 @@ canvas {
 }
 #img-container img {
   transform-origin: top;
-  transform: scale(1.5);
+  transform: scale(0.5);
   animation: scrolla 14s linear infinite;
 }
 #content {
@@ -78,7 +78,7 @@ button,a {
 #content button {
   user-select: none;
 }
-#content button:hovern,#content a:hover {
+#content button:hover,#content a:hover {
   transition: all 0.5s ease;
   background-color: #af8260;
   transform: scale(1.1);

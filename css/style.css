@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  font-family: "Limelight", sans-serif;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.background-menu {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+}
+#menu {
+  position: relative;
+  color: #f6f5f2;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 700px;
+  border-radius: 12px;
+}
+#img-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+#img-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#img-container img {
+  transform-origin: top;
+  transform: scale(1.5);
+  animation: scrolla 14s linear infinite;
+}
+#content {
+  z-index: 1;
+  padding: 100px;
+  display: grid;
+}
+h1,
+#content div,
+button {
+  background-color: #af8260cc;
+  text-align: center;
+  border-radius: 12px;
+  padding: 5px;
+}
+@keyframes scrolla {
+  0% {
+    transform: scale(1.5) translateX(90px);
+  }
+  100% {
+    transform: scale(1.5) translateX(-50px);
+  }
+}
+
+#content > button {
+  margin: 10px auto;
+  margin-top: 30px;
+  margin-bottom: 0;
+  border: none;
+  color: #f6f5f2;
+  padding: 10px;
+  cursor: pointer;
+}
+#content button {
+  user-select: none;
+}
+#content button:hover {
+  transition: all 0.5s ease;
+  background-color: #af8260;
+  transform: scale(1.1);
+}
+#info-dipinto {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+#info-dipinto.show {
+  display: block;
+}
+
+#info-dipinto .info-content {
+  max-width: 500px;
+   margin: 20px; 
+  background-color: #222831cc;
+  color: #f8fae5;
+  padding: 5px 20px;
+  border-radius: 12px;
+  opacity: 1;
+}
+#info-dipinto.show .info-content {
+  animation: animation-show 0.5s ease;
+}
+#info-dipinto .info-content h3 {
+  font-family: "Limelight", sans-serif;
+}
+#info-dipinto .info-content p {
+  text-wrap: pretty;
+}
+@keyframes animation-show {
+  0% {
+    margin-top: 60px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 1;
+  }
+}
+.animation-hide-class{
+  animation: animation-hide 0.5s ease;
+  opacity: 0;
+}
+@keyframes animation-hide {
+  0% {
+  
+    opacity: 1;
+  }
+  100% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+}

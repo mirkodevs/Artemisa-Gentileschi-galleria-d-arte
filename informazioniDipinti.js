@@ -1,7 +1,7 @@
 export const paintingData = [
   // Front Wall
   {
-    imgSrc: `/img/dipinti/artemisia-autoritratto.jpg`,
+    imgSrc: `img/dipinti/artemisia-autoritratto.jpg`,
     width: 5, // width of the painting
     height: 8, // height of the painting
     position: { x: -15 + 10 * 0, y: 3, z: -24.9 }, // position of the painting
@@ -16,7 +16,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Judith-and-Holofernes.jpg`,
+    imgSrc: `img/dipinti/Judith-and-Holofernes.jpg`,
     width: 5, // width of the painting
     height: 6, // height of the painting
     position: { x: -15 + 10 * 1, y: 3, z: -24.9 }, // position of the painting
@@ -31,7 +31,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Jael and Sisera.jpg`,
+    imgSrc: `img/dipinti/Jael and Sisera.jpg`,
     width: 8, // width of the painting
     height: 5, // height of the painting
     position: { x: -15 + 10 * 2, y: 3, z: -24.9 }, // position of the painting
@@ -46,7 +46,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Judith_and_Her_Maidservant.jpg`,
+    imgSrc: `img/dipinti/Judith_and_Her_Maidservant.jpg`,
     width: 5, // width of the painting
     height: 7, // height of the painting
     position: { x: -15 + 10 * 3, y: 3, z: -24.9 }, // position of the painting
@@ -62,7 +62,7 @@ export const paintingData = [
   },
   // Back Wall
   {
-    imgSrc: `/img/dipinti/Mary_Magdalene_in_Ecstasy.jpg`,
+    imgSrc: `img/dipinti/Mary_Magdalene_in_Ecstasy.jpg`,
     width: 8,
     height: 6,
     position: { x: -15 + 9 * 3, y: 3, z: 24.9 },
@@ -77,7 +77,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Lot_and_his_Daughters.jpg`,
+    imgSrc: `img/dipinti/Lot_and_his_Daughters.jpg`,
     width: 8,
     height: 10,
     position: { x: -15 + 7 * 2, y: 3, z: 24.9 },
@@ -92,7 +92,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Danae.jpg`,
+    imgSrc: `img/dipinti/Danae.jpg`,
     width: 10,
     height: 8,
     position: { x: -15 + 2 * 1, y: 3, z: 24.9 },
@@ -108,7 +108,7 @@ export const paintingData = [
   },
   //left
   {
-    imgSrc: `/img/dipinti/Susanna_and_the_Elders.jpg`,
+    imgSrc: `img/dipinti/Susanna_and_the_Elders.jpg`,
     width: 12,
     height: 9,
     position: { x: -24.9, y: 3, z: -15 + 10 * 0 },
@@ -125,7 +125,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Saint_Apollonia.jpg`,
+    imgSrc: `img/dipinti/Saint_Apollonia.jpg`,
     width: 6,
     height: 8,
     position: { x: -24.9, y: 3, z: -15 + 10 * 1 },
@@ -140,7 +140,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Bathsheba.jpg`,
+    imgSrc: `img/dipinti/Bathsheba.jpg`,
     width: 8,
     height: 10,
     position: { x: -24.9, y: 3, z: -15 + 10 * 2 },
@@ -155,7 +155,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Self-Portrait_as_a_Lute_Player.jpg`,
+    imgSrc: `img/dipinti/Self-Portrait_as_a_Lute_Player.jpg`,
     width: 5,
     height: 6,
     position: { x: -24.9, y: 3, z: -15 + 10 * 3 },
@@ -171,7 +171,7 @@ export const paintingData = [
   },
   // Right Wall
   {
-    imgSrc: `/img/dipinti/Artemisia Gentileschi's 'Self Portrait as Saint Catherine of Alexandria.jpg`,
+    imgSrc: `img/dipinti/Artemisia Gentileschi's 'Self Portrait as Saint Catherine of Alexandria.jpg`,
     width: 5,
     height: 4,
     position: { x: 24.9, y: 3, z: -15 + 10 * 0 },
@@ -184,7 +184,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/Esther before Ahasuerus.jpg`,
+    imgSrc: `img/dipinti/Esther before Ahasuerus.jpg`,
     width: 9,
     height: 8,
     position: { x: 24.9, y: 3, z: -15 + 10 * 1 },
@@ -197,7 +197,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/allegoria_dell'inclinazione.jpg`,
+    imgSrc: `img/dipinti/allegoria_dell'inclinazione.jpg`,
     width: 5,
     height: 10,
     position: { x: 24.9, y: 3, z: -15 + 10 * 2 },

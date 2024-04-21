@@ -40,7 +40,7 @@ scene.add(sunLight);
 const textureLoader = new THREE.TextureLoader();
 
 //Textures
-let texturePavimento = textureLoader.load("/img/texture/floor.jpg");
+let texturePavimento = textureLoader.load("img/texture/floor.jpg");
 
 //crea il pavimento
 const geometriaPavimento = new THREE.PlaneGeometry(50, 50);
@@ -59,7 +59,7 @@ scene.add(pavimento);
 const wallGroup = new THREE.Group(); //create a group to hold the walls
 scene.add(wallGroup);
 //wall texture
-const wallTexture = textureLoader.load("/img/texture/wall.jpg");
+const wallTexture = textureLoader.load("img/texture/wall.jpg");
 
 //Front Wall
 const frontWallGeometry = new THREE.BoxGeometry(50, 20, 0.001);
@@ -120,7 +120,7 @@ function checkCollision() {
   return false;
 }
 //Create the ceiling
-const ceilingTexture = textureLoader.load("/img/texture/ceiling.jpg")
+const ceilingTexture = textureLoader.load("img/texture/ceiling.jpg")
 const ceilingGeo = new THREE.PlaneGeometry(50, 50);
 const ceilingMaterial = new THREE.MeshBasicMaterial({
   map:ceilingTexture,

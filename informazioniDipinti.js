@@ -210,7 +210,7 @@ export const paintingData = [
     },
   },
   {
-    imgSrc: `/img/dipinti/annunciazione.jpg`,
+    imgSrc: `img/dipinti/annunciazione.jpg`,
     width: 6,
     height: 9,
     position: { x: 24.9, y: 3, z: -15 + 10 * 3 },
